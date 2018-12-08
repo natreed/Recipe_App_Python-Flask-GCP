@@ -1,0 +1,11 @@
+webapp2
+google-cloud-storage
+GoogleAppEngineCloudStorageClient
+Flask
+google-cloud-datastore
+gunicorn
+google-cloud-texttospeech==0.2.0
+gTTS
+Flask-gTTS
+grpcio
+google-cloud-translate

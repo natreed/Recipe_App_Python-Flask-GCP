@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+{#    https://github.com/mrf345/flask_gtts#}
+
+
+    <span><h3>Translate page to Spanish</h3>
+      <form action="{{ url_for('get_recipes_spanish') }}" method=post>
+            <button class='readIt'
+              id='submit_button'
+              type=submit name="recipe_list">Spanish
+            </button>
+        </form>
+    </span>
+
+    <span><h3>Listen to audio for last entry:</h3>
+      <a href={{ url_for('recipe_audio') }}>Audio</a>
+    </span>
+    <br>
+
+    <h1>Recipes</h1>
+
+    {% for entry in entries %}
+            {% for key, value in entry.items() %}
+                <p class=entry> <b>{{ key }}:</b> {{ value }} </p>
+            {% endfor %}
+            </br>
+    {% endfor %}
+{% endblock %}

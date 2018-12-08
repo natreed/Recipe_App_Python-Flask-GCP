@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2 onmouseover='document.getElementById("welcome_audio").play();'>Welcome to the Recipe Collection</h2>
+    <div>
+        <form action="{{ url_for('get_recipes') }}" method=post>
+            <button class='readIt' 
+              id='submit_button' 
+              type=submit name="recipe_list">View Recipes
+            </button>
+        </form>
+        <form action="{{ url_for('submit_recipes') }}" method=post>
+            <button class='readIt'
+              type=submit name="recipe_submission"
+              text="submit a recipe">Submit a Recipe
+            </button>
+        </form>
+    </div>
+{% endblock %}

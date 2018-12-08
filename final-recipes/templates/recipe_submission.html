@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Fill in the required fields to submit a recipe</h2>
+    <form action="{{ url_for('add_recipe') }}" method=post>
+        <div class="input-group mb-3">
+            <span>
+              <div class="input-group-prepend">
+                Recipe Name
+              </div>
+              <input type="text" name="title" class="form-control" placeholder="recipe name" aria-label="recipe_name" aria-describedby="inputGroup-sizing-default">
+            </span>
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" >Author</span>
+          </div>
+          <input type="text" class="form-control" name="author" placeholder="Author" aria-label="Author" aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" >Ingredients</span>
+          </div>
+          <input type="text" class="form-control" name="ingredients" placeholder="ingredients" aria-label="ingredients" aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Instructions</span>
+            </div>
+            <textarea rows=5 cols=50 name="instructions"></textarea>
+        </div>
+
+
+        <button type=submit name=recipe_submission value=recipe_submission>Submit Recipe</button>
+     </form>
+
+
+{% endblock %}
