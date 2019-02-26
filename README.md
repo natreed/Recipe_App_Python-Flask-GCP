@@ -17,7 +17,11 @@ https://bitbucket.org/NathanReed/cs510c-nathan-reed/src/master/final-recipes/
 ## Layout
 
 Entry-point: App.py
-- Database Model: Models/data
+- App.py is the Controller/ Middleman between views (Jinja2 templates) and the Database Model
+- Links views to URLs
+
+- Database Model: dbModels/data_store.py
+- Views: Initially 'index.html' (Jinja2 template). 
 
 
 
